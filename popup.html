@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CMWA Plex Login Extension</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <style>
+      body {
+        padding-top: 10px;
+        padding-bottom: 20px;
+        background-color: #eee;
+        width: 330px;
+      }
+
+      .form-signin {
+        max-width: 330px;
+        padding: 15px;
+        margin: 0 auto;
+      }
+      .form-signin .form-signin-heading,
+      .form-signin #inputBadgeNumber {
+        margin-bottom: 10px;
+      }
+      .form-signin .checkbox {
+        font-weight: normal;
+      }
+      .form-signin .form-control {
+        position: relative;
+        height: auto;
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+        padding: 10px;
+        font-size: 16px;
+      }
+      .form-signin .form-control:focus {
+        z-index: 2;
+      }
+      .form-signin input[type="email"] {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+      .form-signin input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+    </style>
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    <script src="js/popup.js"></script>
+  </head>
+  <body>
+    <div class="container">
+
+      <form class="form-signin">
+        <h2 class="form-signin-heading">Member sign in</h2>
+        <p class="text-danger"><strong>Note</strong>: We are currently testing this feature and it is only available to the <strong>Rim department</strong> at this time.</p>
+        <div id="formgroupMemberNumber" class="form-group has-feedback">
+          <label class="control-label" for="inputMemberNumber">Member number</label>
+          <input type="text" id="inputMemberNumber" class="form-control animated" placeholder="Enter your member number" required>
+        </div>
+        <div id="formgroupBadgeNumber" class="form-group has-feedback">
+          <label class="control-label" for="inputBadgeNumber">Badge number</label>
+          <input type="text" id="inputBadgeNumber" class="form-control animated" placeholder="Enter your badge number" required>
+        </div>
+        <button id="submit" class="btn btn-lg btn-primary btn-block">Sign in <span class="glyphicon glyphicon-ok"></span></button>
+      </form>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>
